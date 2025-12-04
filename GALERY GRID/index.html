@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de fotos responsiva con CSS Grid y auto-fit, sin media queries.">
+    <title>Galería de Fotografía | Responsive Grid</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">📷 <span class="primary-accent">GRIDFOTO</span>: Galería de Paisajes</h1>
+                <p class="subtitle">Explora la belleza natural con una **galería 100% responsiva** basada en **CSS Grid** moderno.</p>
+            </div>
+        </header>
+
+        <section class="gallery" aria-label="Galería de fotos responsiva">
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=500&fit=crop" alt="Paisaje montañoso al atardecer con cielo despejado" loading="lazy">
+                <figcaption class="overlay">
+                    <h3>Vista Montañosa</h3>
+                    <p>Fotografía de paisajes naturales</p>
+                </figcaption>
+            </figure>
+            
+            <figure class="gallery-item featured">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&h=500&fit=crop" alt="Camino en el bosque con luz solar filtrándose entre los árboles" loading="lazy">
+                <figcaption class="overlay">
+                    <h3>Camino en el Bosque</h3>
+                    <p>Fotografía de naturaleza y senderismo</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=500&fit=crop" alt="Atardecer en la playa con olas suaves y cielo anaranjado" loading="lazy">
+                <figcaption class="overlay">
+                    <h3>Atardecer en la Playa</h3>
+                    <p>Fotografía costera y marina</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item featured-tall"> <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=500&h=500&fit=crop" alt="Cielo nocturno estrellado con la Vía Láctea visible" loading="lazy">
+                <figcaption class="overlay">
+                    <h3>Noche Estrellada</h3>
+                    <p>Astrofotografía y paisajes nocturnos</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=500&h=500&fit=crop" alt="Primer plano de flores coloridas en primavera" loading="lazy">
+                <figcaption class="overlay">
+                    <h3>Flores Primaverales</h3>
+                    <p>Fotografía macro de flores</p>
+                </figcaption>
+            </figure>
+            
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1516617442324-41f12f84c905?w=500&h=500&fit=crop" alt="Luces de la ciudad desde un mirador alto" loading="lazy">
+                <figcaption class="overlay">
+                    <h3>Luces Urbanas</h3>
+                    <p>Fotografía de paisajes urbanos</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&h=500&fit=crop" alt="Bosque brumoso con niebla entre los árboles" loading="lazy">
+                <figcaption class="overlay">
+                    <h3>Bosque Brumoso</h3>
+                    <p>Fotografía atmosférica y misteriosa</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item featured">
+                <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=500&h=500&fit=crop" alt="Cascada en medio de un paisaje verde exuberante" loading="lazy">
+                <figcaption class="overlay">
+                    <h3>Cascada Tropical</h3>
+                    <p>Fotografía de larga exposición</p>
+                </figcaption>
+            </figure>
+            
+            <figure class="gallery-item featured-wide"> <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=500&fit=crop" alt="Dunas de arena en el desierto bajo el sol" loading="lazy">
+                <figcaption class="overlay">
+                    <h3>Dunas del Desierto</h3>
+                    <p>Fotografía de aventura y paisajes áridos</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=500&h=500&fit=crop" alt="Playa tropical con palmeras y arena blanca" loading="lazy">
+                <figcaption class="overlay">
+                    <h3>Paraíso Tropical</h3>
+                    <p>Fotografía de viajes y destinos exóticos</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=500&fit=crop" alt="Valle fluvial visto desde el aire con curvas sinuosas" loading="lazy">
+                <figcaption class="overlay">
+                    <h3>Valle Fluvial</h3>
+                    <p>Vista aérea de paisajes naturales</p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="explanation">
+            <h2>✨ Mejorando el Diseño del Grid</h2>
+            <p class="subtitle">Añadimos nuevas clases para extender el diseño de algunas imágenes y hacer el *layout* más dinámico.</p>
+            <div class="code-example">
+                <h3>CSS Grid con Auto-fit</h3>
+                <pre><code>.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+/* ⭐ Nuevas clases para variar el diseño: */
+.gallery-item.featured { grid-column: span 2; grid-row: span 2; } 
+.gallery-item.featured-tall { grid-row: span 2; }
+.gallery-item.featured-wide { grid-column: span 2; }</code></pre>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h4>Diseño Dinámico</h4>
+                    <p>Las imágenes *Featured* y *Tall* utilizan <code>grid-row: span 2;</code> para una composición visual más atractiva.</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-palette"></i>
+                    <h4>Contraste Cálido</h4>
+                    <p>La paleta Terracota/Coral y Gris Profundo crea un ambiente sofisticado y moderno.</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-code"></i>
+                    <h4>Código Limpio</h4>
+                    <p>Mantenemos la simplicidad de **CSS Grid** y las variables para fácil mantenimiento.</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h4>Mejor Responsive</h4>
+                    <p>Ajuste de las imágenes destacadas para pantallas pequeñas (móviles).</p>
+                </div>
+            </div>
+        </section>
+
+        <button class="back-to-top" aria-label="Volver al inicio de la página">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script>
+        // Funcionalidad para el botón "Volver Arriba"
+        document.querySelector('.back-to-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mostrar/Ocultar botón según el scroll
+        window.addEventListener('scroll', () => {
+            const button = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
