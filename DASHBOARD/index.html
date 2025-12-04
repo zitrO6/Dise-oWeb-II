@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 AdminPro | Dashboard Moderno</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body class="light-theme">
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-chart-line"></i> AdminPro</h2>
+                <button class="toggle-sidebar"><i class="fas fa-bars"></i></button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon"><i class="fas fa-home"></i></span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-chart-bar"></i></span>
+                    <span class="nav-text">Analíticas</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-users"></i></span>
+                    <span class="nav-text">Usuarios</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-boxes"></i></span>
+                    <span class="nav-text">Productos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-dollar-sign"></i></span>
+                    <span class="nav-text">Ventas</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-cog"></i></span>
+                    <span class="nav-text">Configuración</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i> Modo Oscuro
+                </button>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/40?img=3" alt="Usuario">
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Administrador</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-search">
+                <input type="search" placeholder="Buscar...">
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                    <div class="notification-dropdown">
+                        <div class="notification-item">
+                            <div class="notification-icon"><i class="fas fa-user-plus"></i></div>
+                            <div class="notification-content">
+                                <p><strong>Nuevo usuario registrado</strong></p>
+                                <span>Hace 5 minutos</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="notification-content">
+                                <p><strong>Nuevo pedido #1234</strong></p>
+                                <span>Hace 15 minutos</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-icon"><i class="fas fa-star"></i></div>
+                            <div class="notification-content">
+                                <p><strong>Nueva reseña 5 estrellas</strong></p>
+                                <span>Hace 2 horas</span>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <button class="icon-btn message-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span class="badge">5</span>
+                </button>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/40?img=3" alt="Usuario">
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Administrador</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Dashboard</h1>
+                <div class="header-actions">
+                    <button class="btn-primary"><i class="fas fa-plus"></i> Nuevo</button>
+                    <button class="btn-secondary"><i class="fas fa-file-export"></i> Exportar</button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card stat-blue">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-info">
+                        <h3>2,543</h3>
+                        <p>Total Usuarios</p>
+                        <span class="stat-change positive">+12.5%</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-green">
+                    <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="stat-info">
+                        <h3>$45,678</h3>
+                        <p>Ingresos</p>
+                        <span class="stat-change positive">+8.2%</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-orange">
+                    <div class="stat-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="stat-info">
+                        <h3>1,234</h3>
+                        <p>Pedidos</p>
+                        <span class="stat-change negative">-3.1%</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-purple">
+                    <div class="stat-icon"><i class="fas fa-star"></i></div>
+                    <div class="stat-info">
+                        <h3>4.8</h3>
+                        <p>Satisfacción</p>
+                        <span class="stat-change positive">+0.3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Recent Activity -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Actividad Reciente</h3>
+                        <div class="card-actions">
+                            <button class="icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-user-plus"></i></div>
+                            <div class="activity-content">
+                                <p><strong>Nuevo usuario registrado</strong></p>
+                                <span>Hace 5 minutos</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="activity-content">
+                                <p><strong>Venta completada: $234</strong></p>
+                                <span>Hace 15 minutos</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-box"></i></div>
+                            <div class="activity-content">
+                                <p><strong>Pedido #1234 enviado</strong></p>
+                                <span>Hace 1 hora</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-star"></i></div>
+                            <div class="activity-content">
+                                <p><strong>Nueva reseña 5 estrellas</strong></p>
+                                <span>Hace 2 horas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Products -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Productos Destacados</h3>
+                        <div class="card-actions">
+                            <button class="icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Ventas</th>
+                                    <th>Ingresos</th>
+                                    <th>Stock</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="product-info">
+                                            <img src="https://via.placeholder.com/40" alt="Producto A">
+                                            <span>Producto A</span>
+                                        </div>
+                                    </td>
+                                    <td>234</td>
+                                    <td>$12,340</td>
+                                    <td><span class="stock low">12</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-info">
+                                            <img src="https://via.placeholder.com/40" alt="Producto B">
+                                            <span>Producto B</span>
+                                        </div>
+                                    </td>
+                                    <td>189</td>
+                                    <td>$9,450</td>
+                                    <td><span class="stock high">45</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-info">
+                                            <img src="https://via.placeholder.com/40" alt="Producto C">
+                                            <span>Producto C</span>
+                                        </div>
+                                    </td>
+                                    <td>156</td>
+                                    <td>$7,800</td>
+                                    <td><span class="stock medium">28</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-info">
+                                            <img src="https://via.placeholder.com/40" alt="Producto D">
+                                            <span>Producto D</span>
+                                        </div>
+                                    </td>
+                                    <td>143</td>
+                                    <td>$7,150</td>
+                                    <td><span class="stock high">56</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Sales Chart -->
+                <div class="card card-full">
+                    <div class="card-header">
+                        <h3>Ventas Mensuales</h3>
+                        <div class="card-actions">
+                            <select class="chart-period">
+                                <option>2023</option>
+                                <option>2022</option>
+                                <option>2021</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="salesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Cambiar tema (oscuro/claro)
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            document.body.classList.toggle('light-theme');
+            const icon = this.querySelector('i');
+            if (document.body.classList.contains('dark-theme')) {
+                icon.className = 'fas fa-sun';
+                this.textContent = ' Modo Claro';
+            } else {
+                icon.className = 'fas fa-moon';
+                this.textContent = ' Modo Oscuro';
+            }
+        });
+
+        // Menú lateral colapsable
+        document.querySelector('.toggle-sidebar').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.dashboard').classList.toggle('sidebar-collapsed');
+        });
+
+        // Notificaciones dropdown
+        document.querySelector('.notification-btn').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.querySelector('.notification-dropdown').classList.toggle('show');
+        });
+
+        // Cerrar dropdown al hacer clic fuera
+        document.addEventListener('click', function() {
+            document.querySelector('.notification-dropdown').classList.remove('show');
+        });
+
+        // Gráfico de ventas con Chart.js
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                datasets: [{
+                    label: 'Ventas 2023',
+                    data: [1200, 1900, 1500, 2200, 1800, 2500, 2100, 2300, 1900, 2700, 2400, 3000],
+                    backgroundColor: 'rgba(0, 173, 181, 0.7)',
+                    borderColor: 'rgba(0, 173, 181, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Exportar tabla a Excel (simulado)
+        document.querySelector('.btn-secondary').addEventListener('click', function() {
+            alert('Funcionalidad de exportación simulada. En un entorno real, se exportaría a Excel/PDF.');
+        });
+    </script>
+</body>
+</html>
