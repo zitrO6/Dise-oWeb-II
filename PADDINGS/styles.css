@@ -1,0 +1,519 @@
+/* =====================================
+   RESET Y BASE
+   ===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0e1a2b;
+    color: #e6e9ef;
+    line-height: 1.6;
+    padding: 2rem 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+h1 {
+    text-align: center;
+    color: #e6e9ef;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+.subtitle {
+    text-align: center;
+    color: #adc2d9;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+/* =====================================
+   TABLA DE CONTENIDOS
+   ===================================== */
+.toc {
+    background: #162232;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.toc h3 {
+    color: #4e9eff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.toc ul {
+    list-style: none;
+}
+.toc a {
+    color: #adc2d9;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+.toc a:hover {
+    color: #4e9eff;
+}
+/* =====================================
+   SECCIONES DEMO
+   ===================================== */
+.demo-section {
+    background: #162232;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.demo-section h2 {
+    color: #4e9eff;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+}
+.demo-section h2 i {
+    margin-right: 0.5rem;
+}
+.demo-section h3 {
+    color: #c7d3e0;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.25rem;
+}
+.info {
+    background: #ffe07a;
+    padding: 1rem;
+    border-left: 4px solid #ffcc00;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    color: #2c3e50;
+}
+/* =====================================
+   GRIDS
+   ===================================== */
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+/* =====================================
+   BOX DEMOS - PADDING UNIFORME
+   ===================================== */
+.box {
+    background: #1f2d40;
+    border: 2px dashed #3c4a5c;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.content {
+    background: #4e9eff;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+}
+.content p {
+    margin: 0.25rem 0;
+}
+.padding-none {
+    padding: 0;
+    background: #ff6b6b;
+}
+.padding-small {
+    padding: 10px;
+    background: #4e9eff;
+}
+.padding-medium {
+    padding: 20px;
+    background: #7effc4;
+}
+.padding-large {
+    padding: 40px;
+    background: #c77dff;
+}
+.padding-vertical {
+    padding: 30px 10px;
+    background: #ff8f3d;
+}
+.padding-horizontal {
+    padding: 10px 40px;
+    background: #36dcbc;
+}
+.padding-custom {
+    padding: 10px 20px 30px 40px;
+    background: #263447;
+}
+/* =====================================
+   TOOLTIPS
+   ===================================== */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/* =====================================
+   BOTONES
+   ===================================== */
+.buttons-demo {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+.btn {
+    background: #4e9eff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+}
+.btn:hover {
+    background: #3177c9;
+    transform: translateY(-2px);
+}
+.btn-small {
+    padding: 8px 16px;
+}
+.btn-medium {
+    padding: 12px 24px;
+}
+.btn-large {
+    padding: 16px 32px;
+}
+/* =====================================
+   INPUTS
+   ===================================== */
+.inputs-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.input {
+    border: 2px solid #3c4a5c;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    background: #1b2738;
+    color: white;
+    padding: 8px 12px;
+}
+.input:focus {
+    outline: none;
+    border-color: #4e9eff;
+}
+.input-small {
+    padding: 8px 12px;
+}
+.input-medium {
+    padding: 12px 16px;
+}
+.input-large {
+    padding: 16px 20px;
+}
+/* =====================================
+   CARDS
+   ===================================== */
+.cards-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.card {
+    background: #162232;
+    border: 1px solid #3c4a5c;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.card h4 {
+    color: #e6e9ef;
+    margin-bottom: 0.5rem;
+}
+.card p {
+    color: #adc2d9;
+    font-size: 0.9rem;
+}
+.card-compact {
+    padding: 10px;
+}
+.card-comfortable {
+    padding: 20px;
+}
+.card-spacious {
+    padding: 40px;
+}
+/* =====================================
+   BACKGROUNDS
+   ===================================== */
+.bg-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.bg-box {
+    background: linear-gradient(135deg, #4e9eff 0%, #c77dff 100%);
+    border-radius: 12px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bg-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.bg-no-padding {
+    padding: 0;
+}
+.bg-with-padding {
+    padding: 30px;
+}
+.inner-content {
+    background: #ffffff;
+    color: #2c3e50;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+/* =====================================
+   BOX-SIZING
+   ===================================== */
+.comparison-box {
+    text-align: center;
+}
+.comparison-box h3 {
+    margin-bottom: 1rem;
+}
+.sized-box {
+    width: 200px;
+    margin: 0 auto 1rem;
+    background: #4e9eff;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+.sized-box p {
+    margin: 0.25rem 0;
+}
+.highlight {
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: rgba(255,255,255,0.2);
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+.content-box-demo {
+    box-sizing: content-box;
+    padding: 20px;
+}
+.border-box-demo {
+    box-sizing: border-box;
+    padding: 20px;
+}
+.explanation {
+    color: #adc2d9;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+/* =====================================
+   INLINE VS BLOCK
+   ===================================== */
+.inline-padded {
+    padding: 10px 20px;
+    background: #4e9eff;
+    color: white;
+    border-radius: 4px;
+}
+.inline-block-padded {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #7effc4;
+    color: white;
+    border-radius: 4px;
+}
+.block-padded {
+    padding: 20px;
+    background: #c77dff;
+    color: white;
+    margin: 1rem 0;
+    border-radius: 6px;
+    text-align: center;
+}
+/* =====================================
+   SLIDER INTERACTIVO
+   ===================================== */
+.slider {
+    width: 100%;
+    max-width: 500px;
+    margin: 1rem 0;
+}
+#dynamicBox {
+    background: #1f2d40;
+    border: 2px dashed #3c4a5c;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+#dynamicContent {
+    background: #4e9eff;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    transition: padding 0.3s ease;
+}
+/* =====================================
+   EJERCICIOS
+   ===================================== */
+.ejercicio-demo {
+    margin: 1rem 0;
+}
+.ejercicio-card {
+    background: #162232;
+    padding: 25px 15px;
+    border: 1px solid #3c4a5c;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.ejercicio-card h4 {
+    color: #e6e9ef;
+    margin-bottom: 0.5rem;
+}
+.ejercicio-textarea {
+    width: 100%;
+    min-height: 100px;
+    background: #1b2738;
+    border: 2px solid #3c4a5c;
+    border-radius: 8px;
+    color: white;
+    padding: 1rem;
+    font-family: 'Fira Code', monospace;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+.btn-ejercicio {
+    background: #4e9eff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-ejercicio:hover {
+    background: #3177c9;
+}
+/* =====================================
+   RECURSOS
+   ===================================== */
+.recursos-list {
+    list-style: none;
+}
+.recursos-list li {
+    margin-bottom: 0.5rem;
+}
+.recursos-list a {
+    color: #4e9eff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.recursos-list a:hover {
+    color: #7effc4;
+    text-decoration: underline;
+}
+.recursos-list i {
+    margin-right: 0.5rem;
+}
+/* =====================================
+   CÓDIGO DE REFERENCIA
+   ===================================== */
+.code-section {
+    background: #0a1523;
+    color: #e6e9ef;
+}
+.code-section h2 {
+    color: #4e9eff;
+}
+pre {
+    background: #1b2738;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.8;
+}
+code {
+    color: #7effc4;
+    font-size: 0.95rem;
+}
+/* =====================================
+   RESPONSIVE
+   ===================================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .demo-section {
+        padding: 1.5rem 1rem;
+    }
+    .examples-grid,
+    .cards-demo {
+        grid-template-columns: 1fr;
+    }
+    .buttons-demo {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .toc {
+        position: sticky;
+        top: 20px;
+    }
+}

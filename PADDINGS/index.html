@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Paddings | Box Model</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fira+Code&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Experimentando con Paddings</h1>
+        <p class="subtitle">EMMANUEL ORTIZ HERRERA Y CHRISTIAN SEMO MONTERO</p>
+
+        <!-- Tabla de Contenidos -->
+        <div class="toc">
+            <h3><i class="fas fa-list"></i> Contenido</h3>
+            <ul>
+                <li><a href="#uniforme"><i class="fas fa-border-all"></i> Padding Uniforme</a></li>
+                <li><a href="#asimetrico"><i class="fas fa-arrows-alt-h"></i> Padding Asimétrico</a></li>
+                <li><a href="#usos"><i class="fas fa-lightbulb"></i> Casos de Uso</a></li>
+                <li><a href="#backgrounds"><i class="fas fa-fill-drip"></i> Padding y Backgrounds</a></li>
+                <li><a href="#box-sizing"><i class="fas fa-cube"></i> Box-Sizing</a></li>
+                <li><a href="#inline-block"><i class="fas fa-code"></i> Inline vs Block</a></li>
+                <li><a href="#ejercicios"><i class="fas fa-pencil-alt"></i> Ejercicios</a></li>
+                <li><a href="#recursos"><i class="fas fa-book"></i> Recursos</a></li>
+            </ul>
+        </div>
+
+        <!-- Sección 1: Padding Uniforme -->
+        <section class="demo-section" id="uniforme" data-aos="fade-up">
+            <h2><i class="fas fa-border-all"></i> 1. Padding Uniforme</h2>
+            <div class="examples-grid">
+                <div class="box tooltip">
+                    <div class="content padding-none">
+                        <p><strong>Sin padding</strong></p>
+                        <p>padding: 0;</p>
+                    </div>
+                    <span class="tooltiptext">Este elemento no tiene padding.</span>
+                </div>
+
+                <div class="box tooltip">
+                    <div class="content padding-small">
+                        <p><strong>Padding pequeño</strong></p>
+                        <p>padding: 10px;</p>
+                    </div>
+                    <span class="tooltiptext">Padding de 10px en todos los lados.</span>
+                </div>
+
+                <div class="box tooltip">
+                    <div class="content padding-medium">
+                        <p><strong>Padding mediano</strong></p>
+                        <p>padding: 20px;</p>
+                    </div>
+                    <span class="tooltiptext">Padding de 20px en todos los lados.</span>
+                </div>
+
+                <div class="box tooltip">
+                    <div class="content padding-large">
+                        <p><strong>Padding grande</strong></p>
+                        <p>padding: 40px;</p>
+                    </div>
+                    <span class="tooltiptext">Padding de 40px en todos los lados.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Padding Asimétrico -->
+        <section class="demo-section" id="asimetrico" data-aos="fade-up">
+            <h2><i class="fas fa-arrows-alt-h"></i> 2. Padding Asimétrico</h2>
+            <div class="examples-grid">
+                <div class="box tooltip">
+                    <div class="content padding-vertical">
+                        <p><strong>Vertical</strong></p>
+                        <p>padding: 30px 10px;</p>
+                        <p>Más arriba/abajo</p>
+                    </div>
+                    <span class="tooltiptext">Padding vertical de 30px y horizontal de 10px.</span>
+                </div>
+
+                <div class="box tooltip">
+                    <div class="content padding-horizontal">
+                        <p><strong>Horizontal</strong></p>
+                        <p>padding: 10px 40px;</p>
+                        <p>Más izq/der</p>
+                    </div>
+                    <span class="tooltiptext">Padding horizontal de 40px y vertical de 10px.</span>
+                </div>
+
+                <div class="box tooltip">
+                    <div class="content padding-custom">
+                        <p><strong>Personalizado</strong></p>
+                        <p>padding: 10px 20px 30px 40px;</p>
+                        <p>T-R-B-L diferentes</p>
+                    </div>
+                    <span class="tooltiptext">Padding personalizado: 10px (top), 20px (right), 30px (bottom), 40px (left).</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Casos de Uso Prácticos -->
+        <section class="demo-section" id="usos" data-aos="fade-up">
+            <h2><i class="fas fa-lightbulb"></i> 3. Casos de Uso Prácticos</h2>
+
+            <h3>Botones</h3>
+            <div class="buttons-demo">
+                <button class="btn btn-small tooltip"><i class="fas fa-mouse-pointer"></i> Pequeño
+                    <span class="tooltiptext">Padding: 8px 16px</span>
+                </button>
+                <button class="btn btn-medium tooltip"><i class="fas fa-mouse-pointer"></i> Mediano
+                    <span class="tooltiptext">Padding: 12px 24px</span>
+                </button>
+                <button class="btn btn-large tooltip"><i class="fas fa-mouse-pointer"></i> Grande
+                    <span class="tooltiptext">Padding: 16px 32px</span>
+                </button>
+            </div>
+
+            <h3>Inputs</h3>
+            <div class="inputs-demo">
+                <input type="text" class="input input-small" placeholder="Input pequeño">
+                <input type="text" class="input input-medium" placeholder="Input mediano">
+                <input type="text" class="input input-large" placeholder="Input grande">
+            </div>
+
+            <h3>Cards</h3>
+            <div class="cards-demo">
+                <div class="card card-compact tooltip">
+                    <h4>Card Compacta</h4>
+                    <p>padding: 10px;</p>
+                    <span class="tooltiptext">Card con padding mínimo.</span>
+                </div>
+                <div class="card card-comfortable tooltip">
+                    <h4>Card Cómoda</h4>
+                    <p>padding: 20px;</p>
+                    <span class="tooltiptext">Card con padding estándar.</span>
+                </div>
+                <div class="card card-spacious tooltip">
+                    <h4>Card Espaciosa</h4>
+                    <p>padding: 40px;</p>
+                    <span class="tooltiptext">Card con padding generoso.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Padding con Background -->
+        <section class="demo-section" id="backgrounds" data-aos="fade-up">
+            <h2><i class="fas fa-fill-drip"></i> 4. Padding y Backgrounds</h2>
+            <p class="info">💡 <strong>Importante:</strong> El background se extiende hasta el borde, incluyendo el padding</p>
+
+            <div class="bg-demo">
+                <div class="bg-box bg-no-padding tooltip">
+                    <div class="inner-content">Sin padding</div>
+                    <span class="tooltiptext">El fondo no tiene padding.</span>
+                </div>
+                <div class="bg-box bg-with-padding tooltip">
+                    <div class="inner-content">Con padding: 30px</div>
+                    <span class="tooltiptext">El fondo incluye el padding.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 5: Box-Sizing -->
+        <section class="demo-section" id="box-sizing" data-aos="fade-up">
+            <h2><i class="fas fa-cube"></i> 5. Padding y Box-Sizing</h2>
+
+            <div class="comparison-grid">
+                <div class="comparison-box">
+                    <h3>content-box (defecto)</h3>
+                    <div class="sized-box content-box-demo">
+                        <p>width: 200px</p>
+                        <p>padding: 20px</p>
+                        <p class="highlight">Tamaño total: 240px</p>
+                    </div>
+                    <p class="explanation">El padding se SUMA al width</p>
+                </div>
+                <div class="comparison-box">
+                    <h3>border-box (recomendado)</h3>
+                    <div class="sized-box border-box-demo">
+                        <p>width: 200px</p>
+                        <p>padding: 20px</p>
+                        <p class="highlight">Tamaño total: 200px</p>
+                    </div>
+                    <p class="explanation">El padding se RESTA del width</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 6: Padding con Inline vs Block -->
+        <section class="demo-section" id="inline-block" data-aos="fade-up">
+            <h2><i class="fas fa-code"></i> 6. Padding en Elementos Inline vs Block</h2>
+
+            <h3>Inline (span)</h3>
+            <p>
+                Este es un <span class="inline-padded">elemento inline con padding</span> dentro del texto.
+                Observa cómo el padding horizontal funciona, pero el vertical se superpone.
+            </p>
+
+            <h3>Inline-block</h3>
+            <p>
+                Este es un <span class="inline-block-padded">elemento inline-block con padding</span> dentro del texto.
+                El padding funciona correctamente en todos los lados.
+            </p>
+
+            <h3>Block</h3>
+            <div class="block-padded">
+                Elemento block con padding. Ocupa todo el ancho disponible.
+            </div>
+        </section>
+
+        <!-- Sección 7: Slider Interactivo -->
+        <section class="demo-section" data-aos="fade-up">
+            <h2><i class="fas fa-sliders-h"></i> Ajusta el Padding</h2>
+            <p>Mueve el slider para cambiar el padding del recuadro:</p>
+            <input type="range" min="0" max="50" value="10" class="slider" id="paddingSlider">
+            <div class="box" id="dynamicBox">
+                <div class="content" id="dynamicContent">Padding: 10px</div>
+            </div>
+        </section>
+
+        <!-- Sección 8: Ejercicios -->
+        <section class="demo-section" id="ejercicios" data-aos="fade-up">
+            <h2><i class="fas fa-pencil-alt"></i> 📝 Ejercicios</h2>
+            <p>Intenta replicar el siguiente diseño usando padding:</p>
+            <div class="ejercicio-demo">
+                <div class="ejercicio-card">
+                    <h4>Ejemplo a replicar</h4>
+                    <p>padding: 25px 15px;</p>
+                </div>
+            </div>
+            <textarea class="ejercicio-textarea" placeholder="Escribe tu código CSS aquí... Ejemplo:
+.card {
+    padding: 25px 15px;
+}"></textarea>
+            <button class="btn-ejercicio" onclick="evaluarEjercicio()"><i class="fas fa-check"></i> Verificar</button>
+        </section>
+
+        <!-- Sección 9: Recursos -->
+        <section class="demo-section" id="recursos" data-aos="fade-up">
+            <h2><i class="fas fa-book"></i> 📚 Recursos Adicionales</h2>
+            <ul class="recursos-list">
+                <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/padding" target="_blank"><i class="fas fa-external-link-alt"></i> Documentación MDN sobre Padding</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fas fa-external-link-alt"></i> Video: Box Model explicado</a></li>
+                <li><a href="https://css-tricks.com/almanac/properties/p/padding/" target="_blank"><i class="fas fa-external-link-alt"></i> CSS-Tricks: Padding</a></li>
+            </ul>
+        </section>
+
+        <!-- Código de Referencia -->
+        <section class="demo-section code-section" data-aos="fade-up">
+            <h2><i class="fas fa-code"></i> 📝 Referencia Rápida de Padding</h2>
+            <pre><code>/* Un solo valor (todos los lados) */
+padding: 20px;
+/* Dos valores (vertical | horizontal) */
+padding: 10px 20px;
+/* Tres valores (top | horizontal | bottom) */
+padding: 10px 20px 30px;
+/* Cuatro valores (top | right | bottom | left) - sentido horario */
+padding: 10px 15px 20px 25px;
+/* Lados individuales */
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 20px;
+padding-left: 25px;</code></pre>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        // Slider de padding
+        document.getElementById('paddingSlider').addEventListener('input', function() {
+            let padding = this.value + 'px';
+            document.getElementById('dynamicContent').style.padding = padding;
+            document.getElementById('dynamicContent').textContent = 'Padding: ' + padding;
+        });
+        // Función para evaluar ejercicio (simulada)
+        function evaluarEjercicio() {
+            alert("¡Ejercicio verificado! (Esta es una simulación)");
+        }
+    </script>
+</body>
+</html>
