@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución: Modal Centrado Mejorado</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Modal Centrado Mejorado</h1>
+        <p>Haz clic en el botón para abrir el modal</p>
+        <button class="btn-open"><i class="fas fa-plus"></i> Abrir Modal</button>
+
+        <div class="info">
+            <h3><i class="fas fa-info-circle"></i> Características del Modal:</h3>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Centrado con <code>position: fixed</code></li>
+                <li><i class="fas fa-check-circle"></i> Overlay semitransparente</li>
+                <li><i class="fas fa-check-circle"></i> Cierre con botón <code>X</code></li>
+                <li><i class="fas fa-check-circle"></i> Cierre al hacer clic fuera</li>
+                <li><i class="fas fa-check-circle"></i> Transiciones suaves</li>
+                <li><i class="fas fa-check-circle"></i> Formulario interactivo</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Botón flotante para abrir el modal -->
+    <button class="floating-btn" aria-label="Abrir modal">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <!-- Modal overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="btn-close" aria-label="Cerrar modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h2>¡Suscríbete a nuestro boletín!</h2>
+            <p>Recibe las últimas actualizaciones y noticias directamente en tu correo.</p>
+
+            <!-- Formulario de suscripción -->
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" placeholder="Tu nombre" required>
+                </div>
+                <button type="submit" class="btn-modal-action">
+                    <i class="fas fa-paper-plane"></i> Suscribirse
+                </button>
+            </form>
+
+            <div class="modal-features">
+                <div class="feature">
+                    <span class="feature-icon"><i class="fas fa-bullseye"></i></span>
+                    <span>Centrado perfecto</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon"><i class="fas fa-mobile-alt"></i></span>
+                    <span>Responsive</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon"><i class="fas fa-magic"></i></span>
+                    <span>Animaciones suaves</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificación Toast -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>Modal cerrado con éxito</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
