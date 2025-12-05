@@ -1,0 +1,377 @@
+/* =====================================
+   RESET Y VARIABLES (Tema Oscuro)
+   ===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ===== Paleta Oscura ===== */
+    --color-primary: #6c5ce7;          /* Morado vibrante (acento) */
+    --color-primary-dark: #4a3fbd;     /* Morado oscuro */
+    --color-secondary: #1e272e;        /* Azul oscuro secundario */
+    --color-accent: #fd79a8;           /* Rosa vibrante (para badges y CTAs) */
+    --color-dark: #0f1115;             /* Negro profundo (fondo principal) */
+    --color-darker: #0a0b0e;           /* Negro más oscuro (para contrastes) */
+    --color-light: #1a1d23;           /* Gris oscuro (para cards y secciones) */
+    --color-lighter: #2d343a;          /* Gris claro (para bordes y textos secundarios) */
+    --color-white: #ffffff;            /* Blanco (para textos y elementos destacados) */
+    --color-shadow: rgba(0, 0, 0, 0.3); /* Sombras oscuras */
+    --color-shadow-hover: rgba(0, 0, 0, 0.5); /* Sombras más intensas al hover */
+
+    /* Tipografías */
+    --font-main: 'Poppins', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+
+    /* Transiciones y efectos */
+    --transition: all 0.3s ease;
+    --border-radius: 12px;
+    --box-shadow: 0 8px 20px var(--color-shadow);
+    --box-shadow-hover: 0 12px 30px var(--color-shadow-hover);
+}
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* =====================================
+   HEADER (Tema Oscuro)
+   ===================================== */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    font-family: var(--font-main);
+    font-size: 2.8rem;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--color-lighter);
+    margin-bottom: 2rem;
+}
+
+/* =====================================
+   CARDS GRID (Tema Oscuro)
+   ===================================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* =====================================
+   CARD (Tema Oscuro)
+   ===================================== */
+.card {
+    position: relative;
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    transform: translateY(0);
+    border: 1px solid var(--color-darker);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow-hover);
+    border-color: var(--color-primary);
+}
+
+/* =====================================
+   BADGE (Tema Oscuro)
+   ===================================== */
+.badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    animation: badgeBounce 0.5s ease;
+    font-family: var(--font-main);
+}
+
+@keyframes badgeBounce {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Variantes de badges (colores vibrantes para contraste) */
+.badge-new {
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    color: var(--color-dark);
+}
+
+.badge-discount {
+    background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+    color: var(--color-dark);
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+.badge-hot {
+    background: linear-gradient(135deg, #fab1a0 0%, #e74c3c 100%);
+    color: var(--color-white);
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+.badge-limited {
+    background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
+    color: var(--color-white);
+    font-size: 0.65rem;
+    padding: 0.4rem 0.8rem;
+    animation: badgeShake 3s ease-in-out infinite;
+}
+
+.badge-premium {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    color: var(--color-white);
+    border: 2px solid var(--color-accent);
+}
+
+.badge-bestseller {
+    background: linear-gradient(135deg, #f1c40f 0%, #e67e22 100%);
+    color: var(--color-dark);
+}
+
+@keyframes badgePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes badgeShake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+/* =====================================
+   CARD IMAGE (Tema Oscuro)
+   ===================================== */
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--color-darker);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    opacity: 0.9;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* =====================================
+   CARD CONTENT (Tema Oscuro)
+   ===================================== */
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: var(--color-white);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    font-family: var(--font-main);
+    font-weight: 600;
+}
+
+.card-content p {
+    color: var(--color-lighter);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* =====================================
+   CARD FOOTER (Tema Oscuro)
+   ===================================== */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-darker);
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.btn {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    color: var(--color-white);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 10px var(--color-shadow);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--color-shadow-hover);
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-accent));
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* =====================================
+   EXPLORE MORE (Tema Oscuro)
+   ===================================== */
+.explore-more {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.btn-explore {
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-explore:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--color-shadow-hover);
+}
+
+/* =====================================
+   FOOTER (Tema Oscuro)
+   ===================================== */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-darker);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-primary);
+}
+
+.footer p {
+    margin-bottom: 1rem;
+    color: var(--color-lighter);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--color-lighter);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+/* =====================================
+   RESPONSIVE (Tema Oscuro)
+   ===================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 2.2rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .badge {
+        top: 0.7rem;
+        right: 0.7rem;
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .badge-discount {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-content {
+        padding: 1rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}

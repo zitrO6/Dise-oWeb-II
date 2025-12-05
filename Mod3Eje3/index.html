@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda: Cards con Badges</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Productos Destacados</h1>
+        <p class="subtitle">Descubre nuestras mejores ofertas y novedades</p>
+    </header>
+
+    <div class="container">
+        <div class="cards-grid">
+            <!-- Card 1: Auriculares -->
+            <article class="card">
+                <span class="badge badge-new" aria-label="Producto nuevo">NUEVO</span>
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" alt="Auriculares premium" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Auriculares Pro Max</h3>
+                    <p>Cancelación de ruido activa y sonido de alta fidelidad para una experiencia inmersiva.</p>
+                    <div class="card-footer">
+                        <span class="price">$299.99</span>
+                        <button class="btn" aria-label="Comprar Auriculares Pro Max">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2: Reloj -->
+            <article class="card">
+                <span class="badge badge-discount" aria-label="Descuento del 20%">-20%</span>
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop" alt="Reloj elegante" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Reloj Smartwatch</h3>
+                    <p>Seguimiento de actividad 24/7 con diseño elegante y duración de batería de 7 días.</p>
+                    <div class="card-footer">
+                        <span class="price">$199.99</span>
+                        <button class="btn" aria-label="Comprar Reloj Smartwatch">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3: Gafas -->
+            <article class="card">
+                <span class="badge badge-hot" aria-label="Producto popular">HOT</span>
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=300&fit=crop" alt="Gafas de sol" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Gafas de Sol Premium</h3>
+                    <p>Protección UV400 con diseño moderno y materiales de primera calidad.</p>
+                    <div class="card-footer">
+                        <span class="price">$149.99</span>
+                        <button class="btn" aria-label="Comprar Gafas de Sol Premium">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4: Zapatillas -->
+            <article class="card">
+                <span class="badge badge-limited" aria-label="Últimas unidades">¡Últimas unidades!</span>
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=300&fit=crop" alt="Zapatillas deportivas" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Zapatillas Running Pro</h3>
+                    <p>Máximo confort y rendimiento para tus entrenamientos más exigentes.</p>
+                    <div class="card-footer">
+                        <span class="price">$179.99</span>
+                        <button class="btn" aria-label="Comprar Zapatillas Running Pro">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 5: Mochila -->
+            <article class="card">
+                <span class="badge badge-premium" aria-label="Producto premium">PREMIUM</span>
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop" alt="Mochila" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Mochila Profesional</h3>
+                    <p>Compartimento acolchado para laptop y diseño ergonómico anti-robo.</p>
+                    <div class="card-footer">
+                        <span class="price">$89.99</span>
+                        <button class="btn" aria-label="Comprar Mochila Profesional">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 6: Perfume -->
+            <article class="card">
+                <span class="badge badge-bestseller" aria-label="Producto más vendido">★ Bestseller</span>
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=300&fit=crop" alt="Perfume" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Fragancia Signature</h3>
+                    <p>Esencia única que combina notas frescas y amaderadas para ocasiones especiales.</p>
+                    <div class="card-footer">
+                        <span class="price">$129.99</span>
+                        <button class="btn" aria-label="Comprar Fragancia Signature">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="explore-more">
+            <button class="btn-explore" aria-label="Explorar más productos">
+                <i class="fas fa-plus"></i> Explorar más productos
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2023 Tienda Online. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
