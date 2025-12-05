@@ -1,0 +1,349 @@
+/* =====================================
+   RESET Y BOX-SIZING GLOBAL
+   ===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colores (Tema Oscuro/Neón) */
+    --color-primary: #00f7ff;
+    --color-primary-dark: #00c2cc;
+    --color-secondary: #ff00ff;
+    --color-text: #e0e0e0;
+    --color-text-light: #a0a0a0;
+    --color-bg: #121212;
+    --color-bg-secondary: #1e1e1e;
+    --color-border: #00f7ff33;
+    --shadow-neon: 0 0 15px #00f7ff;
+
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Transiciones */
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    padding: var(--spacing-xl) 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* =====================================
+   ENCABEZADO
+   ===================================== */
+.page-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.neon-text-glow {
+    color: var(--color-primary);
+    text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+    font-size: 1.1rem;
+}
+
+.neon-text {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.neon-text-box-model {
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+/* =====================================
+   GRID DE CARDS
+   ===================================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* =====================================
+   CARD COMPONENT
+   ===================================== */
+.card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-neon);
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+}
+
+/* =====================================
+   CARD IMAGE
+   ===================================== */
+.card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(0.9);
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulse 2s infinite;
+}
+
+.badge-sale {
+    background-color: var(--color-secondary);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 var(--color-primary); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 247, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 247, 255, 0); }
+}
+
+/* =====================================
+   CARD CONTENT
+   ===================================== */
+.card-content {
+    padding: var(--spacing-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
+}
+
+.card-price {
+    margin-bottom: var(--spacing-sm);
+}
+
+.price-current {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.price-old {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    text-decoration: line-through;
+    margin-left: var(--spacing-xs);
+}
+
+.card-description {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* =====================================
+   CARD FOOTER
+   ===================================== */
+.card-footer {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-top: auto;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+    font-weight: 600;
+    flex: 1;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* =====================================
+   EXPLICACIÓN DEL BOX MODEL
+   ===================================== */
+.box-model-explanation {
+    background: var(--color-bg-secondary);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: var(--spacing-xl);
+}
+
+.box-model-explanation h2 {
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.75rem;
+}
+
+.explanation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.explanation-item {
+    padding: var(--spacing-md);
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    background-color: var(--color-bg);
+    transition: var(--transition);
+}
+
+.explanation-item:hover {
+    box-shadow: var(--shadow-neon);
+    transform: scale(1.02);
+}
+
+.explanation-item h3 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.explanation-item p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* =====================================
+   BOTÓN DE VOLVER ARRIBA
+   ===================================== */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+#back-to-top:hover {
+    background: var(--color-primary-dark);
+    transform: scale(1.1);
+}
+
+/* =====================================
+   RESPONSIVE
+   ===================================== */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .card-footer {
+        flex-direction: column;
+    }
+
+    .explanation-grid {
+        grid-template-columns: 1fr;
+    }
+}
