@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordes y Border-Radius | CSS Avanzado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Bordes y Border-Radius en CSS</h1>
+            <p class="subtitle">Echo por el grupo BIGDATA</p>
+        </header>
+
+        <!-- Sección 1: Estilos de Border -->
+        <section class="demo-section border-styles-section">
+            <h2>1. Estilos de Border</h2>
+            <div class="border-styles-grid">
+                <div class="border-box border-solid">
+                    <strong>solid</strong>
+                    <p><code>border: 3px solid #8b5cf6;</code></p>
+                </div>
+                <div class="border-box border-dashed">
+                    <strong>dashed</strong>
+                    <p><code>border: 3px dashed #f59e0b;</code></p>
+                </div>
+                <div class="border-box border-dotted">
+                    <strong>dotted</strong>
+                    <p><code>border: 3px dotted #10b981;</code></p>
+                </div>
+                <div class="border-box border-double">
+                    <strong>double</strong>
+                    <p><code>border: 5px double #ec4899;</code></p>
+                </div>
+                <div class="border-box border-groove">
+                    <strong>groove</strong>
+                    <p><code>border: 5px groove #0ea5e9;</code></p>
+                </div>
+                <div class="border-box border-ridge">
+                    <strong>ridge</strong>
+                    <p><code>border: 5px ridge #3b82f6;</code></p>
+                </div>
+                <div class="border-box border-inset">
+                    <strong>inset</strong>
+                    <p><code>border: 5px inset #8b5cf6;</code></p>
+                </div>
+                <div class="border-box border-outset">
+                    <strong>outset</strong>
+                    <p><code>border: 5px outset #f97316;</code></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Bordes Individuales -->
+        <section class="demo-section individual-borders-section">
+            <h2>2. Bordes por Lado</h2>
+            <div class="individual-borders-grid">
+                <div class="border-box border-top-only">
+                    <strong>Solo arriba</strong>
+                    <p><code>border-top: 4px solid #8b5cf6;</code></p>
+                </div>
+                <div class="border-box border-right-only">
+                    <strong>Solo derecha</strong>
+                    <p><code>border-right: 4px solid #f59e0b;</code></p>
+                </div>
+                <div class="border-box border-bottom-only">
+                    <strong>Solo abajo</strong>
+                    <p><code>border-bottom: 4px solid #10b981;</code></p>
+                </div>
+                <div class="border-box border-left-only">
+                    <strong>Solo izquierda</strong>
+                    <p><code>border-left: 4px solid #ec4899;</code></p>
+                </div>
+                <div class="border-box border-mixed">
+                    <strong>Múltiples lados</strong>
+                    <p><code>border-top: 3px solid #8b5cf6;</code></p>
+                    <p><code>border-bottom: 3px solid #f59e0b;</code></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Border-Radius -->
+        <section class="demo-section border-radius-section">
+            <h2>3. Border-Radius</h2>
+            <div class="radius-grid">
+                <div class="radius-box radius-small">
+                    <strong>Pequeño</strong>
+                    <p><code>border-radius: 8px;</code></p>
+                </div>
+                <div class="radius-box radius-medium">
+                    <strong>Mediano</strong>
+                    <p><code>border-radius: 16px;</code></p>
+                </div>
+                <div class="radius-box radius-large">
+                    <strong>Grande</strong>
+                    <p><code>border-radius: 32px;</code></p>
+                </div>
+                <div class="radius-box radius-pill">
+                    <strong>Píldora</strong>
+                    <p><code>border-radius: 50px;</code></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Formas con Border-Radius -->
+        <section class="demo-section shapes-section">
+            <h2>4. Formas Geométricas</h2>
+            <div class="shapes-grid">
+                <div class="shape-container">
+                    <div class="shape circle"></div>
+                    <p><strong>Círculo</strong></p>
+                    <code>border-radius: 50%;</code>
+                </div>
+                <div class="shape-container">
+                    <div class="shape rounded-square"></div>
+                    <p><strong>Cuadrado Redondeado</strong></p>
+                    <code>border-radius: 24px;</code>
+                </div>
+                <div class="shape-container">
+                    <div class="shape top-rounded"></div>
+                    <p><strong>Top Redondeado</strong></p>
+                    <code>border-radius: 50% 50% 0 0;</code>
+                </div>
+                <div class="shape-container">
+                    <div class="shape leaf"></div>
+                    <p><strong>Hoja</strong></p>
+                    <code>border-radius: 0 100% 0 100%;</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 5: Botones -->
+        <section class="demo-section buttons-section">
+            <h2>5. Botones con Estilos de Borde</h2>
+            <div class="buttons-demo">
+                <button class="btn btn-filled">Botón Relleno</button>
+                <button class="btn btn-outline">Botón Contorno</button>
+                <button class="btn btn-ghost">Botón Fantasma</button>
+                <button class="btn btn-gradient">Botón Gradiente</button>
+            </div>
+            <div class="buttons-demo">
+                <button class="btn btn-border-grow">Efecto Creciente</button>
+                <button class="btn btn-border-pulse">Efecto Pulso</button>
+                <button class="btn btn-slide-border">Efecto Deslizante</button>
+            </div>
+        </section>
+
+        <!-- Sección 6: Cards -->
+        <section class="demo-section cards-section">
+            <h2>6. Tarjetas con Bordes</h2>
+            <div class="cards-grid">
+                <div class="card card-simple">
+                    <h3>Tarjeta Simple</h3>
+                    <p>Borde sutil y redondeado</p>
+                </div>
+                <div class="card card-thick">
+                    <h3>Tarjeta con Borde Grueso</h3>
+                    <p>Borde destacado y redondeado</p>
+                </div>
+                <div class="card card-accent">
+                    <h3>Tarjeta con Acento</h3>
+                    <p>Borde lateral para énfasis</p>
+                </div>
+                <div class="card card-glow">
+                    <h3>Tarjeta con Brillo</h3>
+                    <p>Efecto de resplandor al pasar el mouse</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 7: Avatares -->
+        <section class="demo-section avatars-section">
+            <h2>7. Avatares y Badges</h2>
+            <div class="avatars-demo">
+                <div class="avatar-container">
+                    <div class="avatar avatar-circle">
+                        <img src="https://i.pravatar.cc/100?img=1" alt="Avatar Circular">
+                    </div>
+                    <p>Circular</p>
+                </div>
+                <div class="avatar-container">
+                    <div class="avatar avatar-rounded">
+                        <img src="https://i.pravatar.cc/100?img=2" alt="Avatar Redondeado">
+                    </div>
+                    <p>Redondeado</p>
+                </div>
+                <div class="avatar-container">
+                    <div class="avatar avatar-square">
+                        <img src="https://i.pravatar.cc/100?img=3" alt="Avatar Cuadrado">
+                    </div>
+                    <p>Cuadrado</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 8: Efectos Avanzados -->
+        <section class="demo-section advanced-section">
+            <h2>8. Efectos Avanzados</h2>
+            <div class="advanced-grid">
+                <div class="advanced-box gradient-border">
+                    <p><strong>Border con Gradiente</strong></p>
+                    <p>Usando background-clip</p>
+                </div>
+                <div class="advanced-box animated-border">
+                    <p><strong>Border Animado</strong></p>
+                    <p>Transición suave en hover</p>
+                </div>
+                <div class="advanced-box neon-border">
+                    <p><strong>Border Neón</strong></p>
+                    <p>Efecto luminoso con box-shadow</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Código de Referencia -->
+        <section class="demo-section code-section">
+            <h2>📋 Referencia Rápida</h2>
+            <pre><code>/* Border básico */
+border: 2px solid #8b5cf6;
+
+/* Bordes individuales */
+border-top: 3px dashed #f59e0b;
+border-right: 2px solid #10b981;
+border-bottom: 4px double #ec4899;
+border-left: 3px groove #3b82f6;
+
+/* Border-radius */
+border-radius: 12px; /* Todos iguales */
+border-radius: 12px 24px 36px 48px; /* TL TR BR BL */
+border-radius: 50%; /* Círculo */
+
+/* Estilos disponibles */
+solid | dashed | dotted | double
+groove | ridge | inset | outset | none</code></pre>
+        </section>
+    </div>
+</body>
+</html>
