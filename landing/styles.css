@@ -1,0 +1,428 @@
+/* ==============================
+   RESET Y ESTILOS BASE
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #FFFFFF;
+    background-color: #121212;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    padding: 0 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==============================
+   ANIMACIONES
+   ============================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+.zoom-animation {
+    transition: transform 0.3s;
+}
+
+.zoom-animation:hover {
+    animation: zoom 0.5s forwards;
+}
+
+.typing-animation {
+    border-right: 0.15em solid #FF69B4;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #FF69B4; }
+}
+
+/* ==============================
+   NAVBAR
+   ============================== */
+.navbar {
+    background: #1E1E1E;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(255, 105, 180, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FF69B4;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo span {
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-menu {
+    display: none;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #FF69B4;
+    transform: scale(1.05);
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ==============================
+   HERO
+   ============================== */
+.hero {
+    background: linear-gradient(135deg, #1E1E1E 0%, #2A2A2A 100%);
+    color: white;
+    text-align: center;
+    padding: 8rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 105, 180, 0.05) 50%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #FF69B4, #FFD700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background: #FF69B4;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+}
+
+.cta-button:hover {
+    background: #FF1493;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+}
+
+/* ==============================
+   FEATURES
+   ============================== */
+.features {
+    padding: 5rem 0;
+    background: #121212;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #FF69B4;
+    position: relative;
+}
+
+.features h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #FFD700;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.feature-card {
+    background: #1E1E1E;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    border-color: #FF69B4;
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
+}
+
+.icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #FF69B4;
+}
+
+.feature-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.feature-card p {
+    color: #B0B0B0;
+}
+
+/* ==============================
+   GALLERY
+   ============================== */
+.gallery {
+    padding: 5rem 0;
+    background: #121212;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #FF69B4;
+    position: relative;
+}
+
+.gallery h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #FFD700;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+/* ==============================
+   CONTACT
+   ============================== */
+.contact {
+    padding: 5rem 0;
+    background: #1E1E1E;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #FF69B4;
+    position: relative;
+}
+
+.contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #FFD700;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1.2rem;
+    border: 1px solid #333;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #2A2A2A;
+    color: #FFFFFF;
+    transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FF69B4;
+    outline: none;
+}
+
+.submit-button {
+    background: #FF69B4;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-button:hover {
+    background: #FF1493;
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+.footer {
+    background: #121212;
+    color: #B0B0B0;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+}
+
+/* ==============================
+   TABLET - 768px+
+   ============================== */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==============================
+   DESKTOP - 1024px+
+   ============================== */
+@media (min-width: 1024px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
