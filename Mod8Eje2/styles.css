@@ -1,0 +1,315 @@
+/* =====================================
+   RESET Y VARIABLES NEÓN MORADO
+   ===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colores neón (predomina el morado) */
+    --neon-purple: #9d00ff; /* Morado neón principal */
+    --neon-pink: #ff2e63;   /* Rosa neón */
+    --neon-blue: #00a1ff;   /* Azul neón (menos predominante) */
+    --neon-green: #05c46b;  /* Verde neón */
+    --neon-yellow: #ffd93d; /* Amarillo neón */
+    --neon-dark: #0a0a1a;   /* Fondo oscuro */
+    --neon-light-dark: #16122d; /* Morado oscuro para fondos */
+    --neon-border: #9d00ff; /* Borde morado neón */
+
+    /* Botones neón */
+    --btn-success: linear-gradient(135deg, #05c46b, #9d00ff);
+    --btn-danger: linear-gradient(135deg, #ff2e63, #9d00ff);
+    --btn-secondary: linear-gradient(135deg, #ffd93d, #9d00ff);
+
+    /* Espaciado */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Transiciones */
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--neon-dark);
+    background: linear-gradient(135deg, var(--neon-dark) 0%, var(--neon-light-dark) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-lg);
+    color: white;
+}
+
+/* =====================================
+   EFECTO NEÓN MORADO GLOBAL
+   ===================================== */
+.neon-text {
+    color: var(--neon-purple);
+    text-shadow:
+        0 0 5px var(--neon-purple),
+        0 0 10px var(--neon-purple);
+    animation: neon-pulse 1.5s infinite alternate;
+}
+
+@keyframes neon-pulse {
+    from {
+        text-shadow:
+            0 0 5px var(--neon-purple),
+            0 0 10px var(--neon-purple);
+    }
+    to {
+        text-shadow:
+            0 0 10px var(--neon-purple),
+            0 0 20px var(--neon-purple),
+            0 0 30px var(--neon-purple);
+    }
+}
+
+/* =====================================
+   CONTENEDOR PRINCIPAL CON BORDE NEÓN MORADO
+   ===================================== */
+.container {
+    background: var(--neon-light-dark);
+    padding: var(--spacing-xl);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(157, 0, 255, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid var(--neon-border);
+}
+
+.titulo {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xl);
+    font-weight: 700;
+}
+
+/* =====================================
+   DISPLAY DEL CONTADOR CON EFECTO NEÓN MORADO Y MEJOR VISIBILIDAD
+   ===================================== */
+.contador-display {
+    background: rgba(22, 18, 45, 0.8);
+    padding: var(--spacing-xl);
+    border-radius: 15px;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    border: 2px solid var(--neon-border);
+    box-shadow: 0 0 25px rgba(157, 0, 255, 0.7) inset;
+}
+
+.numero {
+    font-size: 5rem;
+    font-weight: 900;
+    display: block;
+    transition: all 0.2s ease;
+    color: var(--neon-purple);
+    text-shadow:
+        0 0 10px rgba(157, 0, 255, 0.7),
+        0 0 20px rgba(157, 0, 255, 0.5);
+}
+
+/* Estados del número con colores neón actualizados */
+.numero.positivo {
+    color: var(--neon-green);
+    text-shadow:
+        0 0 10px rgba(5, 196, 107, 0.7),
+        0 0 20px rgba(5, 196, 107, 0.5);
+    animation: pulso-morado 0.3s ease;
+}
+
+.numero.negativo {
+    color: var(--neon-pink);
+    text-shadow:
+        0 0 10px rgba(255, 46, 99, 0.7),
+        0 0 20px rgba(255, 46, 99, 0.5);
+    animation: pulso-morado 0.3s ease;
+}
+
+.numero.neutro {
+    color: var(--neon-purple);
+    text-shadow:
+        0 0 10px rgba(157, 0, 255, 0.7),
+        0 0 20px rgba(157, 0, 255, 0.5);
+}
+
+/* Animación de pulso con morado */
+@keyframes pulso-morado {
+    0% {
+        transform: scale(1);
+        text-shadow:
+            0 0 10px rgba(157, 0, 255, 0.7),
+            0 0 20px rgba(157, 0, 255, 0.5);
+    }
+    50% {
+        transform: scale(1.07);
+        text-shadow:
+            0 0 15px rgba(157, 0, 255, 0.9),
+            0 0 30px rgba(157, 0, 255, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow:
+            0 0 10px rgba(157, 0, 255, 0.7),
+            0 0 20px rgba(157, 0, 255, 0.5);
+    }
+}
+
+/* =====================================
+   BOTONES CON EFECTO NEÓN MORADO
+   ===================================== */
+.botones {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 0 15px rgba(157, 0, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(157, 0, 255, 0.3), rgba(255, 46, 99, 0.3));
+    z-index: -1;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.btn:hover::before {
+    transform: scaleX(1);
+}
+
+.btn .icono {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-success {
+    background: var(--btn-success);
+}
+
+.btn-danger {
+    background: var(--btn-danger);
+}
+
+.btn-secondary {
+    background: var(--btn-secondary);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(157, 0, 255, 0.5);
+}
+
+/* Botones Bonus con efecto neón morado */
+.botones-bonus {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.btn-small {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 0 10px rgba(157, 0, 255, 0.3);
+    background: rgba(22, 18, 45, 0.7);
+    border: 1px solid var(--neon-border);
+}
+
+.btn-success-light {
+    background: var(--btn-success);
+}
+
+.btn-danger-light {
+    background: var(--btn-danger);
+}
+
+.btn-small:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(157, 0, 255, 0.5);
+}
+
+/* =====================================
+   INFORMACIÓN CON ESTILO NEÓN MORADO
+   ===================================== */
+.info {
+    padding: var(--spacing-md);
+    background: rgba(22, 18, 45, 0.5);
+    border-radius: 10px;
+    border-left: 4px solid var(--neon-border);
+    border-top: 1px solid var(--neon-border);
+}
+
+.info p {
+    color: #e0e0e0;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.info strong {
+    color: var(--neon-purple);
+    font-weight: 700;
+}
+
+/* =====================================
+   RESPONSIVE
+   ===================================== */
+@media (max-width: 600px) {
+    .container {
+        padding: var(--spacing-lg);
+    }
+
+    .titulo {
+        font-size: 1.8rem;
+    }
+
+    .numero {
+        font-size: 3.5rem;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .btn {
+        min-width: 100%;
+    }
+}
