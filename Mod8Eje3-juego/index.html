@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juego de Memoria Neón Verde</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 <span class="neon-text">Juego de Memoria</span></h1>
+
+    <div class="info">
+      <div class="stats">
+        <p>⏱️ Tiempo: <span id="timer" class="neon-timer">00:00</span></p>
+        <p>🔄 Movimientos: <span id="moves" class="neon-moves">0</span></p>
+        <p>⭐ Puntuación: <span id="score" class="neon-score">0</span></p>
+      </div>
+      <button id="resetBtn" class="neon-button">Reiniciar</button>
+    </div>
+
+    <div id="gameBoard" class="board"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
