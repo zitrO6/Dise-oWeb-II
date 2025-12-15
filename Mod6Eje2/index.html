@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashPro - Dashboard Celeste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>DashPro</span>
+            </div>
+            <div class="user-profile">
+                <i class="fas fa-bell notification-icon"></i>
+                <img src="https://i.pravatar.cc/40" alt="User" class="user-avatar">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-users"></i> Usuarios</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-chart-bar"></i> Analíticas</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-cog"></i> Configuración</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Content -->
+        <main class="content">
+            <h1 class="content-title">Dashboard</h1>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-card-icon cyan">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-card-info">
+                        <p class="stat-card-label">Total Usuarios</p>
+                        <h3 class="stat-card-value">2,543</h3>
+                        <p class="stat-card-change positive">↑ 12.5%</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-icon teal">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-card-info">
+                        <p class="stat-card-label">Ingresos</p>
+                        <h3 class="stat-card-value">$45,678</h3>
+                        <p class="stat-card-change positive">↑ 8.2%</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-icon light-blue">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="stat-card-info">
+                        <p class="stat-card-label">Pedidos</p>
+                        <h3 class="stat-card-value">1,234</h3>
+                        <p class="stat-card-change negative">↓ 3.1%</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-icon purple">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-card-info">
+                        <p class="stat-card-label">Satisfacción</p>
+                        <h3 class="stat-card-value">4.8</h3>
+                        <p class="stat-card-change positive">↑ 0.3</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders -->
+            <div class="recent-orders">
+                <h2 class="recent-orders-title">Pedidos Recientes</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Cliente</th>
+                                <th>Producto</th>
+                                <th>Fecha</th>
+                                <th>Monto</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1234</td>
+                                <td>Juan Pérez</td>
+                                <td>Laptop Pro</td>
+                                <td>2024-01-15</td>
+                                <td>$1,299</td>
+                                <td><span class="status-badge completed">Completado</span></td>
+                            </tr>
+                            <tr>
+                                <td>#1235</td>
+                                <td>María García</td>
+                                <td>Mouse Wireless</td>
+                                <td>2024-01-15</td>
+                                <td>$49</td>
+                                <td><span class="status-badge pending">Pendiente</span></td>
+                            </tr>
+                            <tr>
+                                <td>#1236</td>
+                                <td>Carlos López</td>
+                                <td>Teclado Mecánico</td>
+                                <td>2024-01-14</td>
+                                <td>$129</td>
+                                <td><span class="status-badge processing">Procesando</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
