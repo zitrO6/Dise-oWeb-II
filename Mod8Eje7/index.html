@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Digital Neón Azul</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="neon-container">
+        <!-- Reloj Analógico -->
+        <div class="neon-analog-clock">
+            <div class="neon-clock-face">
+                <div class="neon-hand neon-hour-hand"></div>
+                <div class="neon-hand neon-minute-hand"></div>
+                <div class="neon-hand neon-second-hand"></div>
+                <div class="neon-center-circle"></div>
+                <div class="neon-clock-number neon-1">1</div>
+                <div class="neon-clock-number neon-2">2</div>
+                <div class="neon-clock-number neon-3">3</div>
+                <div class="neon-clock-number neon-4">4</div>
+                <div class="neon-clock-number neon-5">5</div>
+                <div class="neon-clock-number neon-6">6</div>
+                <div class="neon-clock-number neon-7">7</div>
+                <div class="neon-clock-number neon-8">8</div>
+                <div class="neon-clock-number neon-9">9</div>
+                <div class="neon-clock-number neon-10">10</div>
+                <div class="neon-clock-number neon-11">11</div>
+                <div class="neon-clock-number neon-12">12</div>
+            </div>
+        </div>
+
+        <!-- Reloj Digital -->
+        <div class="neon-clock-card">
+            <div class="neon-greeting" id="greeting">🌌 Buenos días</div>
+            <div class="neon-time-display">
+                <div class="neon-time" id="time">00:00:00</div>
+                <div class="neon-period" id="period">AM</div>
+            </div>
+            <div class="neon-date" id="date">Lunes, 1 de Enero de 2025</div>
+            <div class="neon-controls">
+                <button class="neon-btn" id="formatBtn">
+                    <span id="formatText">Cambiar a 24h</span>
+                </button>
+            </div>
+            <div class="neon-timezone-info">
+                <span class="neon-label">Zona horaria:</span>
+                <span id="timezone">UTC-5</span>
+            </div>
+        </div>
+
+        <!-- Widget del Clima (Santa Cruz, Bolivia) -->
+        <div class="neon-weather-widget">
+            <div class="neon-weather-icon" id="weatherIcon">☀️</div>
+            <div class="neon-weather-temp" id="weatherTemp">--°C</div>
+            <div class="neon-weather-desc" id="weatherDesc">Cargando...</div>
+            <div class="neon-weather-location" id="weatherLocation">Santa Cruz, BO</div>
+        </div>
+
+        <!-- Estadísticas -->
+        <div class="neon-stats-grid">
+            <div class="neon-stat-card">
+                <div class="neon-stat-icon">📅</div>
+                <div class="neon-stat-value" id="dayOfYear">1</div>
+                <div class="neon-stat-label">Día del año</div>
+            </div>
+            <div class="neon-stat-card">
+                <div class="neon-stat-icon">📆</div>
+                <div class="neon-stat-value" id="weekNumber">1</div>
+                <div class="neon-stat-label">Semana del año</div>
+            </div>
+            <div class="neon-stat-card">
+                <div class="neon-stat-icon">⏰</div>
+                <div class="neon-stat-value" id="secondsToday">0</div>
+                <div class="neon-stat-label">Segundos hoy</div>
+            </div>
+        </div>
+
+        <!-- Fondo Animado -->
+        <div class="neon-animated-background">
+            <div class="neon-particle" style="--size: 3px; --duration: 20s; --delay: 0s; --left: 10%; --top: 20%;"></div>
+            <div class="neon-particle" style="--size: 2px; --duration: 15s; --delay: 2s; --left: 80%; --top: 60%;"></div>
+            <div class="neon-particle" style="--size: 4px; --duration: 25s; --delay: 4s; --left: 40%; --top: 80%;"></div>
+            <div class="neon-particle" style="--size: 3px; --duration: 18s; --delay: 6s; --left: 70%; --top: 30%;"></div>
+            <div class="neon-particle" style="--size: 2.5px; --duration: 22s; --delay: 8s; --left: 20%; --top: 70%;"></div>
+            <div class="neon-particle" style="--size: 3.5px; --duration: 30s; --delay: 10s; --left: 90%; --top: 10%;"></div>
+            <div class="neon-particle" style="--size: 2px; --duration: 17s; --delay: 12s; --left: 50%; --top: 50%;"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
