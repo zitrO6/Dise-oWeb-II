@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neón Color Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="neon-container">
+        <header class="neon-header">
+            <h1 class="neon-title">NEÓN COLOR GENERATOR</h1>
+            <p class="neon-subtitle">Presiona el botón o la barra espaciadora para generar un color neón</p>
+        </header>
+
+        <div class="neon-display">
+            <div class="neon-color-box" id="colorBox"></div>
+            <div class="neon-color-code" id="colorCode">#FF5E00</div>
+        </div>
+
+        <div class="neon-button-group">
+            <button class="neon-btn neon-btn-generate" id="generateBtn">GENERAR NEÓN</button>
+            <button class="neon-btn neon-btn-copy" id="copyBtn">📋 COPIAR CÓDIGO</button>
+        </div>
+
+        <div class="neon-color-info">
+            <div class="neon-info-item">
+                <span class="neon-label">RGB:</span>
+                <span class="neon-value" id="rgbValue">rgb(255, 94, 0)</span>
+            </div>
+            <div class="neon-info-item">
+                <span class="neon-label">HSL:</span>
+                <span class="neon-value" id="hslValue">hsl(24, 100%, 50%)</span>
+            </div>
+            <div class="neon-info-item">
+                <span class="neon-label">HEX:</span>
+                <span class="neon-value" id="hexValue">#FF5E00</span>
+            </div>
+        </div>
+
+        <div class="neon-history">
+            <h2 class="neon-history-title">ÚLTIMOS COLORES NEÓN</h2>
+            <div class="neon-history-grid" id="historyGrid"></div>
+            <button class="neon-btn neon-btn-clear" id="clearHistory">LIMPIAR HISTORIAL</button>
+        </div>
+
+        <div class="neon-tips">
+            <h3>💡 EFECTOS ESPECIALES</h3>
+            <ul class="neon-tips-list">
+                <li>Presiona la <strong>barra espaciadora</strong> para generar un color.</li>
+                <li>Haz clic en un color del historial para volver a usarlo.</li>
+            </ul>
+        </div>
+
+        <div class="neon-background"></div>
+        <div class="neon-toast" id="toast"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

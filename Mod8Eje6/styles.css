@@ -1,0 +1,365 @@
+:root {
+    --neon-orange: #FF5E00;
+    --neon-pink: #FF2E63;
+    --neon-dark: #121212;
+    --neon-text: #FFFFFF;
+    --neon-glow: 0 0 10px var(--neon-orange);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--neon-dark);
+    color: var(--neon-text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.neon-container {
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animación para el título */
+@keyframes neonPulse {
+    0% { text-shadow: 0 0 5px var(--neon-orange); }
+    50% { text-shadow: 0 0 20px var(--neon-orange), 0 0 30px var(--neon-pink); }
+    100% { text-shadow: 0 0 5px var(--neon-orange); }
+}
+
+.neon-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.neon-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    color: var(--neon-orange);
+    text-shadow: var(--neon-glow);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    animation: neonPulse 2s infinite alternate;
+}
+
+.neon-subtitle {
+    color: var(--neon-text);
+    opacity: 0.85;
+    font-size: 1.1rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 0.85; transform: translateY(0); }
+}
+
+.neon-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+/* Animación para el cuadro de color */
+@keyframes colorBoxGlow {
+    0% { box-shadow: 0 0 10px var(--neon-orange); }
+    50% { box-shadow: 0 0 30px var(--neon-orange), 0 0 40px var(--neon-pink); }
+    100% { box-shadow: 0 0 10px var(--neon-orange); }
+}
+
+.neon-color-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px var(--neon-orange);
+    margin-bottom: 1.5rem;
+    transition: background-color 0.5s ease;
+    animation: colorBoxGlow 3s infinite alternate;
+}
+
+.neon-color-code {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-orange);
+    text-shadow: var(--neon-glow);
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.neon-color-code:hover {
+    transform: scale(1.05);
+    animation: none;
+}
+
+/* Animación para botones */
+@keyframes buttonGlow {
+    0% { box-shadow: 0 0 5px var(--neon-orange); }
+    50% { box-shadow: 0 0 20px var(--neon-orange), 0 0 30px var(--neon-pink); }
+    100% { box-shadow: 0 0 5px var(--neon-orange); }
+}
+
+.neon-button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.neon-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.neon-btn-generate {
+    background: linear-gradient(135deg, var(--neon-orange), var(--neon-pink));
+    color: white;
+    box-shadow: var(--neon-glow);
+    border: 2px solid var(--neon-orange);
+    animation: buttonGlow 2s infinite alternate;
+}
+
+.neon-btn-generate:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--neon-orange);
+    animation: none;
+}
+
+.neon-btn-copy {
+    background: transparent;
+    color: var(--neon-orange);
+    border: 2px solid var(--neon-orange);
+    transition: all 0.3s ease;
+}
+
+.neon-btn-copy:hover {
+    background: var(--neon-orange);
+    color: white;
+    box-shadow: var(--neon-glow);
+}
+
+/* Animación para los valores RGB/HSL/HEX */
+@keyframes infoGlow {
+    0% { text-shadow: 0 0 5px var(--neon-orange); }
+    50% { text-shadow: 0 0 15px var(--neon-orange); }
+    100% { text-shadow: 0 0 5px var(--neon-orange); }
+}
+
+.neon-color-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.neon-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.neon-label {
+    font-size: 0.9rem;
+    color: var(--neon-text);
+    opacity: 0.7;
+}
+
+.neon-value {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-orange);
+    text-shadow: var(--neon-glow);
+    font-size: 1.1rem;
+    animation: infoGlow 2.5s infinite alternate;
+}
+
+/* Animación para el historial */
+@keyframes historyItemGlow {
+    0% { transform: scale(1); box-shadow: 0 0 5px rgba(255, 94, 0, 0.5); }
+    50% { transform: scale(1.05); box-shadow: 0 0 15px rgba(255, 94, 0, 0.8); }
+    100% { transform: scale(1); box-shadow: 0 0 5px rgba(255, 94, 0, 0.5); }
+}
+
+.neon-history {
+    background: rgba(20, 20, 20, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    border: 1px solid var(--neon-orange);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.neon-history-title {
+    color: var(--neon-orange);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.neon-history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.neon-history-item {
+    aspect-ratio: 1;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 2px solid var(--neon-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    animation: historyItemGlow 2s infinite;
+}
+
+.neon-history-item:hover {
+    transform: scale(1.1) !important;
+    animation: none;
+}
+
+.neon-btn-clear {
+    width: 100%;
+    background: transparent;
+    color: var(--neon-orange);
+    border: 2px solid var(--neon-orange);
+    transition: all 0.3s ease;
+}
+
+.neon-btn-clear:hover {
+    background: var(--neon-orange);
+    color: white;
+}
+
+.neon-tips {
+    background: rgba(20, 20, 20, 0.7);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--neon-orange);
+    margin-top: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.neon-tips h3 {
+    color: var(--neon-orange);
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.neon-tips-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.neon-tips-list li {
+    margin-bottom: 0.5rem;
+    color: var(--neon-text);
+}
+
+.neon-tips-list strong {
+    color: var(--neon-orange);
+}
+
+/* Animación para el toast */
+@keyframes toastSlide {
+    0% { bottom: -100px; }
+    30% { bottom: 2rem; }
+    70% { bottom: 2rem; }
+    100% { bottom: -100px; }
+}
+
+.neon-toast {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--neon-orange);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    box-shadow: var(--neon-glow);
+    z-index: 1000;
+    font-family: 'Rajdhani', sans-serif;
+    animation: toastSlide 3s ease-out forwards;
+}
+
+.neon-toast.show {
+    animation: none;
+    bottom: 2rem;
+}
+
+/* Animación de fondo */
+@keyframes backgroundPulse {
+    0% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 0.1; }
+}
+
+.neon-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 94, 0, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(255, 46, 0, 0.1) 0%, transparent 30%);
+    z-index: -1;
+    pointer-events: none;
+    animation: backgroundPulse 4s infinite alternate;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .neon-title {
+        font-size: 2.5rem;
+    }
+
+    .neon-color-code {
+        font-size: 2rem;
+    }
+
+    .neon-button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .neon-history-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}
