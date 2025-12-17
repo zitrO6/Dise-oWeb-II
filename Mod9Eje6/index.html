@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Dialog Neon</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <h1><i class="fas fa-window-maximize"></i> Modal Dialog Neon</h1>
+            <p>Ventanas emergentes con estilo futurista</p>
+            <div class="neon-line"></div>
+        </header>
+
+        <main class="content">
+            <section class="intro">
+                <h2>¿Qué es un Modal?</h2>
+                <p>Un modal es una ventana emergente que aparece sobre el contenido principal, ideal para interacciones rápidas y llamativas.</p>
+            </section>
+
+            <section class="demo-buttons">
+                <h3>Ejemplos de Modales Neon</h3>
+                <div class="button-grid">
+                    <button class="btn btn-primary" data-modal="modal1">
+                        <i class="fas fa-file-alt"></i> Formulario
+                    </button>
+                    <button class="btn btn-success" data-modal="modal2">
+                        <i class="fas fa-check-circle"></i> Confirmación
+                    </button>
+                    <button class="btn btn-info" data-modal="modal3">
+                        <i class="fas fa-info-circle"></i> Información
+                    </button>
+                    <button class="btn btn-warning" data-modal="modal4">
+                        <i class="fas fa-images"></i> Galería
+                    </button>
+                    <button class="btn btn-danger" data-modal="modal5">
+                        <i class="fas fa-gamepad"></i> Juego
+                    </button>
+                    <button class="btn btn-dark" data-modal="modal6">
+                        <i class="fas fa-music"></i> Reproductor
+                    </button>
+                </div>
+            </section>
+
+            <section class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Efectos Neon</h3>
+                    <p>Diseño futurista con colores vibrantes</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Rápido</h3>
+                    <p>Carga instantánea sin recargar</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Seguro</h3>
+                    <p>Previene scroll del fondo</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-keyboard"></i></div>
+                    <h3>Accesible</h3>
+                    <p>Cerrar con ESC o clic fuera</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Responsive</h3>
+                    <p>Adaptado a todos los dispositivos</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-theater-masks"></i></div>
+                    <h3>Animaciones</h3>
+                    <p>Transiciones suaves y efectos</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal 1: Formulario -->
+    <div class="modal" id="modal1">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <h2><i class="fas fa-file-alt"></i> Formulario de Contacto</h2>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Nombre:</label>
+                    <input type="text" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-envelope"></i> Email:</label>
+                    <input type="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-comment"></i> Mensaje:</label>
+                    <textarea rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 2: Confirmación -->
+    <div class="modal" id="modal2">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-small">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-icon success"><i class="fas fa-check"></i></div>
+            <h2>Confirmar Acción</h2>
+            <p>¿Estás seguro de realizar esta acción? No se puede deshacer.</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary cancel-btn"><i class="fas fa-ban"></i> Cancelar</button>
+                <button class="btn btn-success"><i class="fas fa-check"></i> Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Información -->
+    <div class="modal" id="modal3">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-icon info"><i class="fas fa-info"></i></div>
+            <h2>Información del Sistema</h2>
+            <p>Los modales son ideales para:</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Mostrar formularios</li>
+                <li><i class="fas fa-exclamation-circle"></i> Confirmar acciones</li>
+                <li><i class="fas fa-images"></i> Mostrar galerías</li>
+                <li><i class="fas fa-info-circle"></i> Proporcionar información</li>
+            </ul>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li><i class="fas fa-magic"></i> Efectos neon vibrantes</li>
+                <li><i class="fas fa-lock"></i> Bloqueo de scroll</li>
+                <li><i class="fas fa-keyboard"></i> Cierre con ESC</li>
+                <li><i class="fas fa-mouse-pointer"></i> Cierre con clic fuera</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal 4: Galería -->
+    <div class="modal" id="modal4">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-large">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <h2><i class="fas fa-images"></i> Galería Neon</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Montaña Neon">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400" alt="Bosque Neon">
+                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400" alt="Playa Neon">
+                <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400" alt="Ciudad Neon">
+                <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?w=400" alt="Espacio Neon">
+                <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?w=400" alt="Noche Neon">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Juego -->
+    <div class="modal" id="modal5">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <h2><i class="fas fa-gamepad"></i> Mini Juego Neon</h2>
+            <p>¡Prueba tu suerte! Haz clic en el botón para generar un número aleatorio.</p>
+            <div class="game-container">
+                <button id="random-number-btn" class="btn btn-warning"><i class="fas fa-dice"></i> Generar Número</button>
+                <div id="random-number-result" class="game-result">?</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: Reproductor de Música -->
+    <div class="modal" id="modal6">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <h2><i class="fas fa-music"></i> Reproductor Neon</h2>
+            <div class="music-player">
+                <div class="album-art">
+                    <i class="fas fa-compact-disc"></i>
+                </div>
+                <div class="song-info">
+                    <h3>Canción Neon</h3>
+                    <p>Artista Desconocido</p>
+                </div>
+                <div class="player-controls">
+                    <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+                    <button class="control-btn play-btn"><i class="fas fa-play"></i></button>
+                    <button class="control-btn"><i class="fas fa-step-forward"></i></button>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
