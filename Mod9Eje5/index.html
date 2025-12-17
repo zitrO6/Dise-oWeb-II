@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Dinámicos Pastel</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs-container">
+            <h1><i class="fas fa-layer-group"></i> Sistema de Pestañas</h1>
+            <p class="subtitle">Navegación intuitiva con estilo pastel</p>
+
+            <!-- Tab Buttons -->
+            <div class="tab-buttons" role="tablist">
+                <button class="tab-btn active" data-tab="tab1" role="tab" aria-selected="true">
+                    <i class="fas fa-home icon"></i>
+                    Inicio
+                </button>
+                <button class="tab-btn" data-tab="tab2" role="tab" aria-selected="false">
+                    <i class="fas fa-concierge-bell icon"></i>
+                    Servicios
+                </button>
+                <button class="tab-btn" data-tab="tab3" role="tab" aria-selected="false">
+                    <i class="fas fa-chart-bar icon"></i>
+                    Estadísticas
+                </button>
+                <button class="tab-btn" data-tab="tab4" role="tab" aria-selected="false">
+                    <i class="fas fa-envelope icon"></i>
+                    Contacto
+                </button>
+                <button class="tab-btn" data-tab="tab5" role="tab" aria-selected="false">
+                    <i class="fas fa-briefcase icon"></i>
+                    Portafolio
+                </button>
+                <button class="tab-btn" data-tab="tab6" role="tab" aria-selected="false">
+                    <i class="fas fa-comments icon"></i>
+                    Testimonios
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-contents">
+                <!-- Tab 1: Inicio -->
+                <div class="tab-content active" id="tab1" role="tabpanel">
+                    <h2>Bienvenido a Nuestro Sistema</h2>
+                    <p>Ofrecemos soluciones digitales con un toque elegante y cálido.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                            <h3>Rápido</h3>
+                            <p>Cambio instantáneo sin recargar la página.</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                            <h3>Diseño Elegante</h3>
+                            <p>Interfaz limpia y acogedora.</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-universal-access"></i></div>
+                            <h3>Accesible</h3>
+                            <p>Navegación con teclado y lectores de pantalla.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Servicios -->
+                <div class="tab-content" id="tab2" role="tabpanel">
+                    <h2>Nuestros Servicios</h2>
+                    <p>Soluciones digitales con un enfoque personalizado y cálido.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Desarrollo Web Full Stack</li>
+                        <li><i class="fas fa-check-circle"></i> Diseño UI/UX Elegante</li>
+                        <li><i class="fas fa-check-circle"></i> Optimización SEO Avanzada</li>
+                        <li><i class="fas fa-check-circle"></i> Aplicaciones Móviles Nativas</li>
+                        <li><i class="fas fa-check-circle"></i> Consultoría Tecnológica</li>
+                        <li><i class="fas fa-check-circle"></i> Mantenimiento y Soporte 24/7</li>
+                    </ul>
+                    <button class="cta-btn"><i class="fas fa-paper-plane"></i> Solicitar Cotización</button>
+                </div>
+
+                <!-- Tab 3: Estadísticas -->
+                <div class="tab-content" id="tab3" role="tabpanel">
+                    <h2>Estadísticas del Proyecto</h2>
+                    <p>Datos actualizados sobre nuestro rendimiento.</p>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">1,234</div>
+                            <div class="stat-label">Clientes Satisfechos</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Tasa de Éxito</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Soporte Técnico</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Proyectos Completados</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Contacto -->
+                <div class="tab-content" id="tab4" role="tabpanel">
+                    <h2>Contáctanos</h2>
+                    <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo.</p>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Nombre:</label>
+                            <input type="text" id="name" placeholder="Ej: Juan Pérez" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                            <input type="email" id="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Mensaje:</label>
+                            <textarea id="message" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-btn"><i class="fas fa-paper-plane"></i> Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Tab 5: Portafolio -->
+                <div class="tab-content" id="tab5" role="tabpanel">
+                    <h2>Nuestro Portafolio</h2>
+                    <p>Algunos de nuestros proyectos destacados.</p>
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <img src="https://via.placeholder.com/300x200?text=Tienda+Online" alt="Tienda Online">
+                            <h3>Tienda Online</h3>
+                            <p>Desarrollo con React y Node.js para una experiencia de compra fluida.</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="https://via.placeholder.com/300x200?text=App+Móvil" alt="App Móvil">
+                            <h3>App Móvil</h3>
+                            <p>Aplicación nativa para iOS y Android con Firebase.</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="https://via.placeholder.com/300x200?text=Dashboard" alt="Dashboard">
+                            <h3>Dashboard Analítico</h3>
+                            <p>Panel de control con datos en tiempo real usando Vue.js.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 6: Testimonios -->
+                <div class="tab-content" id="tab6" role="tabpanel">
+                    <h2>Testimonios de Clientes</h2>
+                    <p>Opiniones de quienes han trabajado con nosotros.</p>
+                    <div class="testimonials">
+                        <div class="testimonial">
+                            <div class="testimonial-text">"Excelente servicio y atención al detalle. ¡Superó nuestras expectativas!"</div>
+                            <div class="testimonial-author">- María Gómez, CEO de TechSolutions</div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-text">"Profesionales, rápidos y con soluciones innovadoras. ¡Totalmente recomendados!"</div>
+                            <div class="testimonial-author">- Carlos Ruiz, Gerente de Marketing</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="keyboard-hint">
+                <i class="fas fa-keyboard"></i> Tip: Usa las flechas ← → para navegar entre tabs o los números 1-6
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
