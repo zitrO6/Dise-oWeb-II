@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas Neón</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="generator-card">
+            <h1>🔐 Generador de Contraseñas</h1>
+            <p class="subtitle">Crea contraseñas seguras y aleatorias con estilo neón</p>
+
+            <div class="password-display">
+                <input type="text" id="passwordOutput" readonly value="Genera una contraseña">
+                <button class="btn-copy" id="copyBtn" title="Copiar">📋</button>
+            </div>
+
+            <div class="strength-indicator">
+                <div class="strength-bar" id="strengthBar"></div>
+            </div>
+            <p class="strength-text" id="strengthText">Fuerza: -</p>
+
+            <form id="generatorForm">
+                <div class="form-group">
+                    <label for="length">Longitud: <span id="lengthValue">12</span></label>
+                    <input
+                        type="range"
+                        id="length"
+                        name="length"
+                        min="4"
+                        max="32"
+                        value="12"
+                    >
+                </div>
+
+                <div class="options-group">
+                    <h3>Opciones:</h3>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="uppercase" id="uppercase" checked>
+                        <span class="checkmark"></span>
+                        <span>Incluir Mayúsculas (A-Z)</span>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="lowercase" id="lowercase" checked>
+                        <span class="checkmark"></span>
+                        <span>Incluir Minúsculas (a-z)</span>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="numbers" id="numbers" checked>
+                        <span class="checkmark"></span>
+                        <span>Incluir Números (0-9)</span>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="symbols" id="symbols">
+                        <span class="checkmark"></span>
+                        <span>Incluir Símbolos (!@#$%^&*)</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-generate">Generar Contraseña</button>
+            </form>
+
+            <div class="history-section">
+                <h3>Contraseñas Generadas:</h3>
+                <div id="historyList">
+                    <p class="empty">No hay contraseñas generadas aún</p>
+                </div>
+                <button class="btn-clear" id="clearHistoryBtn" style="display: none;">
+                    Limpiar Historial
+                </button>
+            </div>
+
+            <div class="tips">
+                <h3>💡 Consejos de Seguridad:</h3>
+                <ul>
+                    <li>Usa contraseñas de al menos <strong>12 caracteres</strong>.</li>
+                    <li>Combina mayúsculas, minúsculas, números y símbolos.</li>
+                    <li>No reutilices contraseñas en diferentes sitios.</li>
+                    <li>Cambia tus contraseñas periódicamente.</li>
+                    <li>Usa un <strong>gestor de contraseñas</strong> para mayor seguridad.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">✓ Contraseña copiada al portapapeles</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
