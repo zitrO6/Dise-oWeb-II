@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Pro Ultra - Filtros y Archivos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="sidebar neon-sidebar">
+        <h2 class="neon-title">Paint Studio</h2>
+
+        <div class="control-group neon-group">
+            <label class="section-title neon-label">Archivo</label>
+            <input type="file" id="imageLoader" accept="image/*" hidden>
+            <button class="neon-button" onclick="document.getElementById('imageLoader').click()">📂 Abrir Foto</button>
+            <button id="downloadBtn" class="neon-button primary">💾 Guardar PNG</button>
+        </div>
+
+        <div class="control-group neon-group">
+            <label class="section-title neon-label">Herramientas</label>
+            <div class="tool-grid neon-grid">
+                <button class="tool neon-tool active" data-tool="brush">🖌️</button>
+                <button class="tool neon-tool" data-tool="rectangle">⏹️</button>
+                <button class="tool neon-tool" data-tool="circle">⭕</button>
+                <button class="tool neon-tool" data-tool="eraser">🧽</button>
+            </div>
+        </div>
+
+        <div class="control-group neon-group">
+            <label class="section-title neon-label">Filtros Pro</label>
+            <button id="filterGray" class="neon-button filter">Escala Grises</button>
+            <button id="filterInvert" class="neon-button filter">Invertir</button>
+            <button id="filterSepia" class="neon-button filter">Sepia</button>
+        </div>
+
+        <div class="control-group neon-group">
+            <label class="neon-label">Color</label>
+            <input type="color" id="colorPicker" value="#1a73e8" class="neon-color-picker">
+            <label class="neon-label">Grosor: <span id="wLabel">5</span>px</label>
+            <input type="range" id="lineWidth" min="1" max="100" value="5" class="neon-slider">
+        </div>
+    </nav>
+
+    <main class="editor-area neon-editor">
+        <canvas id="canvas" class="neon-canvas"></canvas>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

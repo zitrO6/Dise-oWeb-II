@@ -1,0 +1,225 @@
+:root {
+    --neon-pink: #ff2ced;
+    --neon-blue: #0af2ff;
+    --neon-purple: #bf00ff;
+    --neon-green: #00ff9d;
+    --neon-yellow: #fff200;
+    --neon-black: #0a021d;
+    --neon-dark: #120a3d;
+    --neon-light: rgba(20, 2, 50, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: var(--neon-black);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    color: var(--neon-green);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(0, 255, 157, 0.05) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(15, 242, 255, 0.05) 0%, transparent 30%);
+}
+
+/* --- SIDEBAR NEÓN --- */
+.neon-sidebar {
+    width: 300px;
+    background: var(--neon-light);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    border-right: 1px solid var(--neon-purple);
+    box-shadow: 0 0 20px var(--neon-blue);
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    position: relative;
+    overflow-y: auto;
+}
+
+.neon-sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 255, 157, 0.05) 50%, transparent 100%);
+    pointer-events: none;
+}
+
+.neon-title {
+    color: var(--neon-green);
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px var(--neon-blue);
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* --- GRUPOS DE CONTROL NEÓN --- */
+.neon-group {
+    background: rgba(10, 2, 29, 0.5);
+    border: 1px solid var(--neon-purple);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+}
+
+.neon-label {
+    display: block;
+    color: var(--neon-blue);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- BOTONES NEÓN --- */
+.neon-button {
+    width: 100%;
+    padding: 0.7rem;
+    background: var(--neon-dark);
+    color: var(--neon-green);
+    border: 1px solid var(--neon-purple);
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+}
+
+.neon-button:hover {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
+    transform: translateY(-2px);
+}
+
+.neon-button.primary {
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+    color: var(--neon-black);
+    border: none;
+}
+
+.neon-button.filter {
+    background: var(--neon-dark);
+    border: 1px solid var(--neon-green);
+}
+
+.neon-button.filter:hover {
+    box-shadow: 0 0 20px var(--neon-green);
+}
+
+/* --- HERRAMIENTAS NEÓN --- */
+.neon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.neon-tool {
+    aspect-ratio: 1;
+    background: var(--neon-dark);
+    border: 1px solid var(--neon-purple);
+    color: var(--neon-green);
+    font-size: 1.4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neon-tool:hover {
+    background: rgba(0, 255, 157, 0.2);
+    border-color: var(--neon-blue);
+    transform: scale(1.05);
+}
+
+.neon-tool.active {
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+    color: var(--neon-black);
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.5);
+}
+
+/* --- SELECTOR DE COLOR NEÓN --- */
+.neon-color-picker {
+    width: 100%;
+    height: 40px;
+    background: var(--neon-dark);
+    border: 2px solid var(--neon-purple);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* --- SLIDER NEÓN --- */
+.neon-slider {
+    -webkit-appearance: none;
+    height: 8px;
+    background: linear-gradient(to right, var(--neon-pink), var(--neon-blue), var(--neon-purple));
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.neon-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--neon-green);
+    border: 2px solid var(--neon-purple);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--neon-green);
+}
+
+/* --- ÁREA DEL EDITOR NEÓN --- */
+.neon-editor {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(0, 255, 157, 0.05) 0%, rgba(15, 242, 255, 0.05) 100%);
+}
+
+/* --- LIENZO NEÓN --- */
+.neon-canvas {
+    background: #ffffff;
+    box-shadow:
+        0 0 0 5px var(--neon-purple),
+        0 0 0 10px var(--neon-blue),
+        0 0 30px rgba(0, 255, 157, 0.3);
+    border-radius: 5px;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* --- SCROLLBAR NEÓN --- */
+.neon-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.neon-sidebar::-webkit-scrollbar-track {
+    background: var(--neon-dark);
+}
+
+.neon-sidebar::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--neon-pink), var(--neon-blue));
+    border-radius: 3px;
+}
